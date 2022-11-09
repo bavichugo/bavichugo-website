@@ -1,0 +1,36 @@
+.nav-bar__main-container {
+    height: 4rem;
+    display: flex;
+}
+
+.nav-bar__link-style a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar__main-centered-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-bar__main-inner-container a {
+    margin-left: 1rem;
+    font-size: large;
+    padding-bottom: 0.5rem;
+
+    &:hover {
+        border-bottom: 2px solid blue;
+    }
+}
+
+.nav-bar__my-name {
+    font-size: x-large;
+    white-space: nowrap;
+}
+
+.active {
+    border-bottom: 2px solid blue;
+    color: red;
+}
