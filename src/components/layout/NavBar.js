@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
 import MainCenteredLayout from "./MainCenteredLayout";
 import "./NavBar.scss";
@@ -9,13 +9,18 @@ const NavBar = () => {
   return (
     <nav className="nav-bar__main-container">
       <MainCenteredLayout className="nav-bar__main-centered-container nav-bar__link-style">
-        <NavLink to="/" className="nav-bar__my-name">Victor Hugo Batistela</NavLink>
+        <Link
+          to="/"
+          className="nav-bar__my-name"
+        >
+          Victor Hugo Batistela
+        </Link>
         <ul className="nav-bar__main-inner-container">
-          <NavLink to="experience" activeClassName="active">Experience</NavLink>
-          <NavLink to="education" activeClassName="active">Education</NavLink>
-          <NavLink to="activities" activeClassName="active">Activities</NavLink>
-          <NavLink to="projects" activeClassName="active">Projects</NavLink>
-          <NavLink to="contact" activeClassName="active">Contact</NavLink>
+          <NavLink to="experience">Experience</NavLink>
+          <NavLink to="education">Education</NavLink>
+          <NavLink to="activities">Activities</NavLink>
+          <NavLink to="projects">Projects</NavLink>
+          <NavLink to="contact">Contact</NavLink>
         </ul>
       </MainCenteredLayout>
     </nav>
