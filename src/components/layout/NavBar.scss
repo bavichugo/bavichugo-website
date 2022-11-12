@@ -1,38 +1,74 @@
-@import '../../constants.scss';
+@import "../../constants.scss";
+
+$icon-width: 2rem;
+$icon-height: 2rem;
 
 .nav-bar__main-container {
-    height: 4rem;
-    display: flex;
-}
-
-.nav-bar__link-style a {
-    color: white;
-    text-decoration: none;
+  height: 4rem;
+  display: flex;
 }
 
 .nav-bar__main-centered-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.nav-bar__main-inner-container a {
-    margin-left: 1rem;
-    font-size: large;
-    padding-bottom: 0.5rem;
-
-    &:hover {
-        border-bottom: 3px solid $blue-light;
-    }
-}
-
-.active {
-    border-bottom: 3px solid $blue-light;
+.nav-bar__link-style a {
+  color: white;
+  text-decoration: none;
 }
 
 .nav-bar__my-name {
-    font-size: x-large;
-    white-space: nowrap;
+  font-size: x-large;
+  white-space: nowrap;
 }
 
+.nav-bar__main-inner-container {
+  display: none;
+  list-style-type: none;
+  row-gap: 1rem;
+  margin: 0;
+
+  @media screen and (min-width: $medium-screen-breakpoint) {
+    display: flex;
+  }
+}
+
+.nav-bar__main-inner-container a {
+  margin-left: 1rem;
+  font-size: large;
+
+  &:hover {
+    border-bottom: 3px solid $blue-light;
+  }
+}
+
+.active {
+  border-bottom: 3px solid $blue-light;
+}
+
+.nav-bar__burger-menu {
+  width: $icon-width;
+  height: $icon-height;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  @media screen and (min-width: $medium-screen-breakpoint) {
+    display: none;
+  }
+}
+
+.icon-test {
+  color: white;
+}
