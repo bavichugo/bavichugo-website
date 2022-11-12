@@ -45,10 +45,6 @@ $icon-height: 2rem;
   }
 }
 
-.active {
-  border-bottom: 3px solid $blue-light;
-}
-
 .nav-bar__burger-menu {
   width: $icon-width;
   height: $icon-height;
@@ -67,8 +63,4 @@ $icon-height: 2rem;
   @media screen and (min-width: $medium-screen-breakpoint) {
     display: none;
   }
-}
-
-.icon-test {
-  color: white;
 }

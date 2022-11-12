@@ -1,8 +1,9 @@
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import MainCenteredLayout from "./MainCenteredLayout";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import "./NavBar.scss";
+import NavBarItem from "./NavBarItem";
 
 const NavBar = () => {
   return (
@@ -12,29 +13,16 @@ const NavBar = () => {
           Victor Hugo Batistela
         </Link>
         <ul className="nav-bar__main-inner-container">
-          <li>
-            <NavLink to="experience">Experience</NavLink>
-          </li>
-          <li>
-            <NavLink to="education">Education</NavLink>
-          </li>
-          <li>
-            <NavLink to="activities">Activities</NavLink>
-          </li>
-          <li>
-            <NavLink to="projects">Projects</NavLink>
-          </li>
-          <li>
-            <NavLink to="contact">Contact</NavLink>
-          </li>
+          <NavBarItem to="experience">Experience</NavBarItem>
+          <NavBarItem to="education">Education</NavBarItem>
+          <NavBarItem to="activities">Activities</NavBarItem>
+          <NavBarItem to="projects">Projects</NavBarItem>
+          <NavBarItem to="contact">Contact</NavBarItem>
         </ul>
-        <button
-          className="nav-bar__burger-menu"
-          onClick={() => console.log("this was clicked")}
-        >
+        <button className="nav-bar__burger-menu">
           <IconContext.Provider value={{ color: "white" }}>
             <FaBars />
-          </IconContext.Provider> 
+          </IconContext.Provider>
         </button>
       </MainCenteredLayout>
     </nav>
