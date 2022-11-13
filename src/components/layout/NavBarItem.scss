@@ -1,5 +1,13 @@
 @import "../../constants.scss";
 
-.nav-bar__active {
+.nav-bar-item__active {
   border-bottom: 3px solid $blue-light;
+}
+
+.nav-bar-item__emoji {
+  // display: none;
+
+  &:hover {
+    display: none;
+  }
 }

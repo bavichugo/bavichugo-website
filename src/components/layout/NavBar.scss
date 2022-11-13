@@ -6,6 +6,7 @@ $icon-height: 2rem;
 .nav-bar__main-container {
   height: 4rem;
   display: flex;
+  margin-bottom: 1rem;
 }
 
 .nav-bar__main-centered-container {
@@ -31,17 +32,18 @@ $icon-height: 2rem;
   row-gap: 1rem;
   margin: 0;
 
+  a {
+    margin-left: 1rem;
+    font-size: large;
+    padding-bottom: 3px;
+
+    &:hover {
+      border-bottom: 3px solid $blue-light;
+    }
+  }
+
   @media screen and (min-width: $medium-screen-breakpoint) {
     display: flex;
-  }
-}
-
-.nav-bar__main-inner-container a {
-  margin-left: 1rem;
-  font-size: large;
-
-  &:hover {
-    border-bottom: 3px solid $blue-light;
   }
 }
 

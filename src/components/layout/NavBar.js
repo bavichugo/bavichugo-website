@@ -10,13 +10,12 @@ const NavBar = () => {
     <nav className="nav-bar__main-container">
       <MainCenteredLayout className="nav-bar__main-centered-container nav-bar__link-style">
         <Link to="/" className="nav-bar__my-name">
-          Victor Hugo Batistela
+          Victor Hugo Batistela 👨‍💻
         </Link>
         <ul className="nav-bar__main-inner-container">
           <NavBarItem to="experience">Experience</NavBarItem>
-          <NavBarItem to="education">Education</NavBarItem>
+          <NavBarItem to="education" >Education</NavBarItem>
           <NavBarItem to="activities">Activities</NavBarItem>
-          <NavBarItem to="projects">Projects</NavBarItem>
           <NavBarItem to="contact">Contact</NavBarItem>
         </ul>
         <button className="nav-bar__burger-menu">
