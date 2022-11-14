@@ -5,7 +5,7 @@ const Timeline = (props) => {
   let isRight = true;
 
   return (
-    <div className="timeline">
+    <div id="timeline">
       {props.data.map((experience, index) => {
         isRight = !isRight;
         return <TimelineItem title={experience.title} content={experience.content} isRight={isRight} key={`${experience.title}${index}`} />
