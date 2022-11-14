@@ -1,5 +1,10 @@
+import Timeline from "../components/timeline/Timeline";
+import { experienceData } from "../data";
+
 const Experience = () => {
-    return <h1>Experience</h1>
-}
+  return (
+    <Timeline data={experienceData} />
+  );
+};
 
 export default Experience;
