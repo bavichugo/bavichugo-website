@@ -128,6 +128,31 @@ header {
         @include prefix(border-radius, 3px 3px 0 0);
       }
 
+      h3 {
+        margin: 0;
+        background-color: $timeline-color;
+        margin: -20px -20px 0 -20px;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 5px;
+        padding-left: 15px;
+        color: white;
+      }
+
+      h4 {
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+
+      .timeline-content-list {
+        padding-left: 15px;
+        margin-top: 10px;
+
+        li {
+          margin-bottom: 8px;
+        }
+      }
+
       &:before {
         content: "";
         position: absolute;
@@ -178,7 +203,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $medium-screen-breakpoint) {
   #timeline {
     margin: 30px;
     padding: 0px;
