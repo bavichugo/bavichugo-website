@@ -17,13 +17,6 @@ const Home = () => {
           and I am always down to play some Volleyball!
         </p>
       </div>
-      <div className="home__image-container">
-        <img
-          className="home__image"
-          src={victorSmilingPng}
-          alt="Victor Hugo Batistela"
-        />
-      </div>
     </div>
   );
 };

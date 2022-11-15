@@ -1,5 +1,16 @@
+import EducationItem from "../components/education/EducationItem";
+import { educationData } from "../data";
+
+
+
 const Education = () => {
-    return <h1>Education</h1>;
-}
+  return (
+    <div className="education__container">
+      {educationData.map((item) => (
+        <EducationItem item={item} />
+      ))}
+    </div>
+  );
+};
 
 export default Education;

@@ -23,7 +23,7 @@
   }
 
   @media screen and (min-width: $medium-screen-breakpoint) {
-    width: 50%;
+    padding: 0 10rem;
   }
 }
 
@@ -44,7 +44,7 @@
 .home__hand-emoji {
   animation-name: wave-animation;
   animation-duration: 4.5s;       
-  animation-iteration-count: infinite;  
+  animation-iteration-count: 3;  
   transform-origin: 70% 70%;       
   display: inline-block;
 }

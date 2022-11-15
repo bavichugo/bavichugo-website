@@ -1,5 +1,7 @@
 import { FaLinkedin } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa";
+import gtLogo from "./assets/gatech.png";
+import mdcLogo from "./assets/mdc.jpeg";
 
 export const experienceData = [
   {
@@ -31,3 +33,22 @@ export const experienceData = [
     icon: <FaBriefcase />,
   },
 ];
+
+export const educationData = [
+  {
+    university: "Georgia Tech",
+    gpa: "4.00",
+    dates: "2021 to 2024 (expected)",
+    courses: [],
+    logo: gtLogo,
+    degreeType: "B.S. in Computer Science"
+  },
+  {
+    university: "MDC Honors",
+    gpa: "3.96",
+    dates: "2019 to 2021",
+    courses: [],
+    logo: mdcLogo,
+    degreeType: "A.A. in Computer Science"
+  }
+]

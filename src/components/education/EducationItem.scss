@@ -1,0 +1,69 @@
+@import "../../constants.scss";
+
+.education-item__container {
+  display: flex;
+  flex-direction: column;
+  background-color: $blue-item;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.education-item__inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: $medium-screen-breakpoint) {
+    flex-direction: row;
+  }
+}
+
+.education-item__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+
+  .education-item__image {
+    width: 100%;
+    border-radius: 10px;
+
+    @media screen and (min-width: $small-screen-breakpoint) {
+      width: 70%;
+    }
+  }
+
+  @media screen and (min-width: $medium-screen-breakpoint) {
+    display: 50%;
+  }
+}
+
+.education-item__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+
+  h1, h2, h3 {
+    font-weight: 400;
+  }
+
+  h1, h2 {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (min-width: $medium-screen-breakpoint) {
+    display: 50%;
+  }
+}
