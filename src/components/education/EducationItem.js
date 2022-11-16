@@ -11,11 +11,30 @@ const EducationItem = (props) => {
         </div>
         <div className="education-item__description">
           <h1>{university}</h1>
-          <h2><i>{degreeType}</i> - {dates}</h2>
+          <h2>
+            <i>{degreeType}</i>
+          </h2>
+          <h2>{dates}</h2>
           <h3>GPA: {gpa} / 4.00</h3>
         </div>
       </div>
-      {/* <div className="education-item__courses-container"></div> */}
+      {courses.length > 0 && (
+        <div className="education-item__courses-container">
+          <h2>Coursework</h2>
+          <div className="education-item__courses-inner-container">
+            {courses.map((course) => (
+              <div className="education-item__courses-item">
+                <span className="education-item__courses-item-name">
+                  {course.name}
+                </span>
+                <div className="education-item__courses-item-image">
+                  <img src={course.icon} alt={course.iconAlt} />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
