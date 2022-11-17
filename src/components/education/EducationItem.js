@@ -1,3 +1,4 @@
+import Skills from "../skills/Skills";
 import "./EducationItem.scss";
 
 const EducationItem = (props) => {
@@ -18,23 +19,7 @@ const EducationItem = (props) => {
           <h3>GPA: {gpa} / 4.00</h3>
         </div>
       </div>
-      {courses.length > 0 && (
-        <div className="education-item__courses-container">
-          <h2>Coursework</h2>
-          <div className="education-item__courses-inner-container">
-            {courses.map((course) => (
-              <div className="education-item__courses-item">
-                <span className="education-item__courses-item-name">
-                  {course.name}
-                </span>
-                <div className="education-item__courses-item-image">
-                  <img src={course.icon} alt={course.iconAlt} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      { courses.length ? <Skills skills={courses} sectionName="Coursework" /> : "" }
     </div>
   );
 };
