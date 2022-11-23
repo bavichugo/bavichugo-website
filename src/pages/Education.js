@@ -1,8 +1,6 @@
 import EducationItem from "../components/education/EducationItem";
 import { educationData } from "../data";
 
-
-
 const Education = () => {
   return (
     <div className="education__container">
