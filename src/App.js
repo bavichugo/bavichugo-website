@@ -6,6 +6,7 @@ import Experience from "./pages/Experience.js";
 import Home from "./pages/Home.js";
 import NavBar from "./components/layout/NavBar.js";
 import MainCenteredLayout from "./components/layout/MainCenteredLayout.js";
+import "./App.scss";
 
 const App = () => {
   return (
