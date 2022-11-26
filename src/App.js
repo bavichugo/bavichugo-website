@@ -1,3 +1,4 @@
+import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 import Activities from "./pages/Activities.js";
 import Contact from "./pages/Contact.js";
@@ -6,11 +7,12 @@ import Experience from "./pages/Experience.js";
 import Home from "./pages/Home.js";
 import NavBar from "./components/layout/NavBar.js";
 import MainCenteredLayout from "./components/layout/MainCenteredLayout.js";
-import "./App.scss";
+import Footer from "./components/layout/Footer";
 
 const App = () => {
   return (
     <div className="app">
+      <div className="app__inner-container">
       <NavBar />
       <MainCenteredLayout>
         <Routes>
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="/experience" element={<Experience />} />
         </Routes>
       </MainCenteredLayout>
+      </div>
+      <Footer />
     </div>
   );
 };

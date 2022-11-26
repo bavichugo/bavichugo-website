@@ -1,4 +1,8 @@
-.app {
-  height: 100%;
-  width: 100%;    
+.app, .app__inner-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.app__inner-container {
+  padding-bottom: 6rem; // Footer height
 }
