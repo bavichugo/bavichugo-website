@@ -13,16 +13,16 @@ const App = () => {
   return (
     <div className="app">
       <div className="app__inner-container">
-      <NavBar />
-      <MainCenteredLayout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/activities" element={<Activities />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/experience" element={<Experience />} />
-        </Routes>
-      </MainCenteredLayout>
+        <NavBar />
+        <MainCenteredLayout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/activities" element={<Activities />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/experience" element={<Experience />} />
+          </Routes>
+        </MainCenteredLayout>
       </div>
       <Footer />
     </div>
