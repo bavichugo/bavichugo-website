@@ -1,5 +1,8 @@
+import EducationItemContainer from "../components/education/EducationItemContainer";
+import { activitiesData } from "../data";
+
 const Activities = () => {
-    return <h1>Activities</h1>;
-}
+  return <EducationItemContainer data={activitiesData} />;
+};
 
 export default Activities;

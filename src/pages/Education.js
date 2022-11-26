@@ -2,7 +2,7 @@ import EducationItemContainer from "../components/education/EducationItemContain
 import { educationData } from "../data";
 
 const Education = () => {
-  return <EducationItemContainer data={educationData} />
+  return <EducationItemContainer data={educationData} />;
 };
 
 export default Education;

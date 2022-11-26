@@ -1,8 +1,17 @@
-import Skills from "../skills/Skills";
+import Skills from "./skills/Skills";
 import "./EducationItem.scss";
 
 const EducationItem = (props) => {
-  const { university, gpa, dates, courses, logo, degreeType } = props.item;
+  const {
+    university,
+    gpa,
+    dates,
+    skills,
+    logo,
+    degreeType,
+    position,
+    organization,
+  } = props.item;
 
   return (
     <div className="education-item__container">
@@ -11,15 +20,25 @@ const EducationItem = (props) => {
           <img className="education-item__image" src={logo} alt={university} />
         </div>
         <div className="education-item__description">
-          <h1>{university}</h1>
-          <h2>
-            <i>{degreeType}</i>
-          </h2>
+          {university && <h1>{university}</h1>}
+          {position && <h1>{position}</h1>}
+          {degreeType && (
+            <h2>
+              <i>{degreeType}</i>
+            </h2>
+          )}
+          {organization && (
+            <h2 className="education-item__description-position">{organization}</h2>
+          )}
           <h2>{dates}</h2>
-          <h3>GPA: {gpa} / 4.00</h3>
+          {gpa && <h3>GPA: {gpa} / 4.00</h3>}
         </div>
       </div>
-      { courses.length ? <Skills skills={courses} sectionName="Coursework" /> : "" }
+      {skills?.length ? (
+        <Skills skills={skills} sectionName={university ? "Coursework" : "Skills"} />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

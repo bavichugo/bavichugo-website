@@ -1,13 +1,75 @@
 import { FaLinkedin, FaBriefcase } from "react-icons/fa";
 import gtLogo from "./assets/gatech.png";
 import mdcLogo from "./assets/mdc.jpeg";
-import javaPng from "./assets/java.png";
-import mysqlPng from "./assets/mysql.png";
-import mathPng from "./assets/math.png";
-import cPng from "./assets/c.png";
-import ethicsPng from "./assets/ethics.png";
+import java from "./assets/java.png";
+import mysql from "./assets/mysql.png";
+import math from "./assets/math.png";
+import c from "./assets/c.png";
+import ethics from "./assets/ethics.png";
 import cPlusPlus from "./assets/cplusplus.png";
+import feedingSouthFlorida from "./assets/feeding-south-florida-logo.png";
+import robot from "./assets/yellow-robot.png";
+import youtube from "./assets/youtube-logo.jpg";
+import python from "./assets/python-logo.png";
+import leetcode from "./assets/leetcode-logo.png";
+import teaching from "./assets/teaching.jpeg";
+import communication from "./assets/communication.jpg";
+import volunteer from "./assets/volunteer.png";
 
+const SKILLS = {
+  COMMUNICATION: {
+    name: "Communication",
+    icon: communication,
+  },
+  PYTHON: {
+    name: "Python",
+    icon: python,
+  },
+  JAVA: {
+    name: "Java",
+    icon: java,
+  },
+  LEETCODE: {
+    name: "LeetCode",
+    icon: leetcode,
+  },
+  TEACHING: {
+    name: "Teaching",
+    icon: teaching,
+  },
+  MATH: {
+    name: "Math",
+    icon: math,
+  },
+  C_PLUS_PLUS: {
+    name: "C++",
+    icon: cPlusPlus,
+  },
+  C: {
+    name: "C",
+    icon: c,
+  },
+  MYSQL: {
+    name: "MySQL", 
+    icon: mysql
+  },
+  ETHICS: {
+    name: "Ethics",
+    icon: ethics
+  },
+  VOLUNTEER: {
+    name: "Volunteer",
+    icon: volunteer
+  }
+};
+
+/**
+ * titile: string
+ * date: string
+ * role: string
+ * content: array
+ * icon: component
+ */
 export const experienceData = [
   {
     title: "ServiceNow (upcoming)",
@@ -36,6 +98,17 @@ export const experienceData = [
   },
 ];
 
+/**
+ * university: string
+ * gpa: string
+ * dates: string
+ * logo: image
+ * degreeType: string
+ * skills: [
+ *  name: string
+ *  icon: image
+ * ]
+ */
 export const educationData = [
   {
     university: "Georgia Tech",
@@ -43,42 +116,34 @@ export const educationData = [
     dates: "2021 to 2024 (expected)",
     logo: gtLogo,
     degreeType: "B.S. in Computer Science",
-    courses: [
+    skills: [
       {
-        number: "CS 1331",
         name: "Introduction to Object Oriented Programming",
-        icon: javaPng,
-        iconAlt: "Java",
+        icon: SKILLS.JAVA.icon,
       },
       {
-        number: "CS 1332",
         name: "Data Structures and Algorithms for Applications",
-        icon: javaPng
+        icon: SKILLS.JAVA.icon,
       },
       {
-        number: "CS 2340",
         name: "Objects and Design",
-        icon: javaPng
+        icon: SKILLS.JAVA.icon,
       },
       {
-        number: "CS 4400",
         name: "Introduction to Database Systems",
-        icon: mysqlPng
+        icon: SKILLS.MYSQL.icon,
       },
       {
-        number: "CS 2050",
         name: "Introduction to Discrete Mathematics for Computer Science",
-        icon: mathPng
+        icon: SKILLS.MATH.icon,
       },
       {
-        number: "CS 2110",
         name: "Computer Organization and Programming",
-        icon: cPng
+        icon: SKILLS.C.icon,
       },
       {
-        number: "CS 3001",
         name: "Computing, Society, and Professionalism",
-        icon: ethicsPng
+        icon: SKILLS.ETHICS.icon,
       },
     ],
   },
@@ -88,37 +153,77 @@ export const educationData = [
     dates: "2019 to 2021",
     logo: mdcLogo,
     degreeType: "A.A. in Computer Science",
-    courses: [
+    skills: [
       {
-        number: "MAC 2311",
         name: "Calculus I",
-        icon: mathPng
+        icon: SKILLS.MATH.icon,
       },
       {
-        number: "MAC 2312",
         name: "Calculus II",
-        icon: mathPng
+        icon: SKILLS.MATH.icon,
       },
       {
-        number: "MAC 2313",
         name: "Calculus III",
-        icon: mathPng
+        icon: SKILLS.MATH.icon,
       },
       {
-        number: "MAP 2302",
         name: "Intro Differential Equations",
-        icon: mathPng
+        icon: SKILLS.MATH.icon,
       },
       {
-        number: "COP 1334",
         name: "Introduction to C++ Programming",
-        icon: cPlusPlus
+        icon: SKILLS.C_PLUS_PLUS.icon,
       },
       {
-        number: "COP 2800",
         name: "Java Programming",
-        icon: javaPng
+        icon: SKILLS.JAVA.icon,
       },
+    ],
+  },
+];
+
+/**
+ * university: string
+ * position: string
+ * dates: string
+ * logo: image
+ * skills: [
+ *  name: string
+ *  icon: image
+ * ]
+ */
+export const activitiesData = [
+  {
+    organization: "YouTube",
+    position: "Content Creator",
+    dates: "2021 - 2022",
+    logo: youtube,
+    skills: [
+      SKILLS.PYTHON,
+      SKILLS.JAVA,
+      SKILLS.LEETCODE
+    ],
+  },
+  {
+    organization: "Robotics Club",
+    position: "Vice-President",
+    dates: "2020 - 2021",
+    logo: robot,
+    skills: [
+      SKILLS.JAVA,
+      SKILLS.COMMUNICATION,
+      SKILLS.TEACHING,
+    ],
+  },
+  {
+    organization: "Feeding South Florida",
+    position: "Volunteer Leader",
+    dates: "2018 - 2021",
+    logo: feedingSouthFlorida,
+    skills: [
+      SKILLS.COMMUNICATION,
+      SKILLS.TEACHING,
+      SKILLS.VOLUNTEER
     ],
   },
 ];

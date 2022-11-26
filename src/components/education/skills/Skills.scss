@@ -1,4 +1,4 @@
-@import "../../constants.scss";
+@import "../../../constants.scss";
 
 $icon-max-width: 75px;
 
@@ -23,6 +23,7 @@ $icon-max-width: 75px;
 
 .skills__item {
   display: flex;
+  flex: 1 0 20rem;
   justify-content: space-between;
   align-items: center;
   align-content: center;
@@ -31,7 +32,6 @@ $icon-max-width: 75px;
   font-size: 1.2rem;
   padding: 1rem;
   border-radius: $border-radius;
-  flex: 1 0 20rem;
 }
 
 .skills__item-name {
