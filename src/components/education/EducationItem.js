@@ -13,6 +13,10 @@ const EducationItem = (props) => {
     organization,
   } = props.item;
 
+  const title = university || position;
+  const subtitle = degreeType || organization;
+  const gpaInfo = `GPA: ${gpa} / 4.00`;
+
   return (
     <div className="education-item__container">
       <div className="education-item__inner-container">
@@ -20,24 +24,21 @@ const EducationItem = (props) => {
           <img className="education-item__image" src={logo} alt={university} />
         </div>
         <div className="education-item__description">
-          {university && <h1>{university}</h1>}
-          {position && <h1>{position}</h1>}
-          {degreeType && (
-            <h2>
-              <i>{degreeType}</i>
-            </h2>
-          )}
-          {organization && (
-            <h2 className="education-item__description-position">{organization}</h2>
-          )}
+          <h1>{title}</h1>
+          <h2
+            className={organization && "education-item__description-position"}
+          >
+            {subtitle}
+          </h2>
           <h2>{dates}</h2>
-          {gpa && <h3>GPA: {gpa} / 4.00</h3>}
+          {gpa && <h3>{gpaInfo}</h3>}
         </div>
       </div>
-      {skills?.length ? (
-        <Skills skills={skills} sectionName={university ? "Coursework" : "Skills"} />
-      ) : (
-        ""
+      {!!skills?.length && (
+        <Skills
+          skills={skills}
+          sectionName={university ? "Coursework" : "Skills"}
+        />
       )}
     </div>
   );
