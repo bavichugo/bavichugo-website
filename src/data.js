@@ -50,17 +50,17 @@ const SKILLS = {
     icon: c,
   },
   MYSQL: {
-    name: "MySQL", 
-    icon: mysql
+    name: "MySQL",
+    icon: mysql,
   },
   ETHICS: {
     name: "Ethics",
-    icon: ethics
+    icon: ethics,
   },
   VOLUNTEER: {
     name: "Volunteer",
-    icon: volunteer
-  }
+    icon: volunteer,
+  },
 };
 
 /**
@@ -72,7 +72,7 @@ const SKILLS = {
  */
 export const experienceData = [
   {
-    title: "ServiceNow (upcoming)",
+    title: "ServiceNow (incoming)",
     date: "May 2023 - August 2023",
     role: "Software Engineer Intern",
     content: ["I will work on ServiceNow's Chat Bot system"],
@@ -83,9 +83,7 @@ export const experienceData = [
     date: "September 2022 - December 2022",
     role: "UI Engineer Intern",
     content: [
-      "Worked in the simplified campaign creation project which is projected to increase revenue by 30 million",
-      "Wrote integration and acceptance testing",
-      "Developed scalable code using Ember.js",
+      "Working in the simplified campaign creation project which is projected to increase ad revenue millions",
     ],
     icon: <FaLinkedin />,
   },
@@ -93,7 +91,11 @@ export const experienceData = [
     title: "ServiceNow",
     date: "May 2022 - August 2022",
     role: "Software Engineer Intern",
-    content: [],
+    content: [
+      "Developed a migration tool using JavaScript, HTML, CSS, and ServiceNow’s Front-End framework (Seismic) that assisted users to decide whether to migrate ServiceNow's latest UI version",
+      "Built highly interactive web-based application UIs that can scale with application complexity",
+      "Worked in an agile environment with weekly stand-up meetings and weekly 2-hour sprint planning",
+    ],
     icon: <FaBriefcase />,
   },
 ];
@@ -198,32 +200,20 @@ export const activitiesData = [
     position: "Content Creator",
     dates: "2021 - 2022",
     logo: youtube,
-    skills: [
-      SKILLS.PYTHON,
-      SKILLS.JAVA,
-      SKILLS.LEETCODE
-    ],
+    skills: [SKILLS.PYTHON, SKILLS.JAVA, SKILLS.LEETCODE],
   },
   {
     organization: "Robotics Club",
     position: "Vice-President",
     dates: "2020 - 2021",
     logo: robot,
-    skills: [
-      SKILLS.JAVA,
-      SKILLS.COMMUNICATION,
-      SKILLS.TEACHING,
-    ],
+    skills: [SKILLS.JAVA, SKILLS.COMMUNICATION, SKILLS.TEACHING],
   },
   {
     organization: "Feeding South Florida",
     position: "Volunteer Leader",
     dates: "2018 - 2021",
     logo: feedingSouthFlorida,
-    skills: [
-      SKILLS.COMMUNICATION,
-      SKILLS.TEACHING,
-      SKILLS.VOLUNTEER
-    ],
+    skills: [SKILLS.COMMUNICATION, SKILLS.TEACHING, SKILLS.VOLUNTEER],
   },
 ];
