@@ -22,8 +22,15 @@ $icon-height: 2rem;
 }
 
 .nav-bar__my-name {
+  display: flex;
+  align-items: center;
   font-size: x-large;
   white-space: nowrap;
+  height: 100%;
+
+  img {
+    height: 50%;
+  }
 }
 
 .nav-bar__main-inner-container {

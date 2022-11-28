@@ -6,6 +6,7 @@ import "./NavBar.scss";
 import NavBarItem from "./NavBarItem";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
+import memojiComputer from "../../assets/memoji-computer.png";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,9 +17,9 @@ const NavBar = () => {
         <MobileMenu setIsMobileMenuOpen={setIsMobileMenuOpen} />
       )}
       <MainCenteredLayout className="nav-bar__main-centered-container nav-bar__link-style">
-        <Link to="/" className="nav-bar__my-name">
-          Victor Hugo Batistela 👨‍💻
-        </Link>
+          <Link to="/" className="nav-bar__my-name">
+            Victor Hugo Batistela <img src={memojiComputer} alt="victor emoji on computer" />
+          </Link>
         <ul className="nav-bar__main-inner-container">
           <NavBarItem to="experience">Experience</NavBarItem>
           <NavBarItem to="education">Education</NavBarItem>

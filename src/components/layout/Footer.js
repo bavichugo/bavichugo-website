@@ -1,5 +1,5 @@
 import "./Footer.scss";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import { IconContext } from "react-icons";
 
 const Footer = () => {
@@ -13,6 +13,10 @@ const Footer = () => {
       link: "https://www.instagram.com/victorbatistela/",
       component: <FaInstagram />,
     },
+    {
+      link: "https://www.youtube.com/@programadormestre5392",
+      component: <FaYoutube />
+    }
   ];
 
   return (
