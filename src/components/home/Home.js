@@ -1,4 +1,5 @@
 import "./Home.scss";
+import me from "../../assets/memoji-waving.png";
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
         <h1>
           Hello there <span className="home__hand-emoji">👋</span>
         </h1>
+        <img src={me} className="home__image" />
         <p>
           My name is Victor Hugo Batistela, and this is my portfolio! I was born
           in São Paulo, Brazil, and moved to the United States in 2017. I

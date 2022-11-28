@@ -27,18 +27,9 @@
   }
 }
 
-.home__image-container {
-  margin: 0 auto;
-  width: 75%;
-
-  @media screen and (min-width: $medium-screen-breakpoint) {
-    width: 50%;
-  }
-}
-
 .home__image {
   width: 100%;
-  border-radius: 5px;
+  max-width: 20rem;
 }
 
 .home__hand-emoji {
