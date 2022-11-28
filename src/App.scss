@@ -1,8 +1,10 @@
+@import "./constants.scss";
+
 .app, .app__inner-container {
   position: relative;
   min-height: 100vh;
 }
 
 .app__inner-container {
-  padding-bottom: 8rem; // Footer height
+  padding-bottom: $footer-height + 1rem; // Footer height
 }
