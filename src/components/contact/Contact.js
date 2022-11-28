@@ -1,14 +1,19 @@
-import { useState } from "react";
 import "./Contact.scss";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const [isValidForm, setIsValidForm] = useState(false);
+  const form = useRef();
 
-  const onSubmitHandler = (event) => {
-    event.preventDefault();
-    console.log(event);
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    // TODO: add form submission logic
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+      .then((result) => {
+          console.log("Message delivered");
+      }, (error) => {
+          console.log("Error: message was not delivered");
+      });
   };
 
   return (
@@ -18,20 +23,20 @@ const Contact = () => {
         If you have any opportunity, feedback, or just want to become friends
         feel free to send me an email so we can talk!
       </p>
-      <form className="contact__form" onSubmit={onSubmitHandler}>
+      <form ref={form} className="contact__form" onSubmit={sendEmail}>
         <fieldset>
           <legend>Name</legend>
-          <input id="name" type="text" placeholder="Your name"/>
+          <input name="name" type="text" placeholder="Your name"/>
         </fieldset>
         <fieldset>
           <legend>Email</legend>
-          <input id="email" type="email" placeholder="random@example.com"/>
+          <input name="email" type="email" placeholder="random@example.com"/>
         </fieldset>
         <fieldset>
           <legend>Subject</legend>
-          <input id="subject" type="text" placeholder="Meme convention"/>
+          <input name="subject" type="text" placeholder="Meme convention"/>
         </fieldset>
-        <textarea id="message" placeholder="Message"/>
+        <textarea name="message" placeholder="Message"/>
         <button type="submit">Send</button>
       </form>
     </div>
