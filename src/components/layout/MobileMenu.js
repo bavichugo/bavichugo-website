@@ -15,13 +15,7 @@ const MobileMenu = (props) => {
             <NavBarItem to="/">Home</NavBarItem>
           </li>
           <li>
-            <NavBarItem to="experience">Experience</NavBarItem>
-          </li>
-          <li>
-            <NavBarItem to="education">Education</NavBarItem>
-          </li>
-          <li>
-            <NavBarItem to="activities">Activities</NavBarItem>
+            <NavBarItem to="resume">Resume</NavBarItem>
           </li>
           <li>
             <NavBarItem to="contact">Contact</NavBarItem>

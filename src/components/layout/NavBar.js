@@ -21,9 +21,7 @@ const NavBar = () => {
             Victor Hugo Batistela <img src={memojiComputer} alt="victor emoji on computer" />
           </Link>
         <ul className="nav-bar__main-inner-container">
-          <NavBarItem to="experience">Experience</NavBarItem>
-          <NavBarItem to="education">Education</NavBarItem>
-          <NavBarItem to="activities">Activities</NavBarItem>
+          <NavBarItem to="resume">Resume</NavBarItem>
           <NavBarItem to="contact">Contact</NavBarItem>
         </ul>
         <button
