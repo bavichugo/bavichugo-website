@@ -15,8 +15,8 @@ const Footer = () => {
     },
     {
       link: "https://www.youtube.com/@programadormestre5392",
-      component: <FaYoutube />
-    }
+      component: <FaYoutube />,
+    },
   ];
 
   return (
@@ -25,9 +25,7 @@ const Footer = () => {
         <ul>
           {icons.map((icon) => (
             <li>
-              <IconContext.Provider
-                value={{ className: "footer__icon" }}
-              >
+              <IconContext.Provider value={{ className: "footer__icon" }}>
                 <a href={icon.link} target="_blank">
                   {icon.component}
                 </a>

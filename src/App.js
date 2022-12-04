@@ -12,8 +12,8 @@ const App = () => {
   return (
     <div className="app">
       <CustomParticles />
+      <NavBar />
       <div className="app__inner-container">
-        <NavBar />
         <MainCenteredLayout>
           <Routes>
             <Route path="/" element={<Home />} />
