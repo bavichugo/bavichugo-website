@@ -83,7 +83,7 @@ export const experienceData = [
     date: "September 2022 - December 2022",
     role: "UI Engineer Intern",
     content: [
-      "Working in the simplified campaign creation project which is projected to increase ad revenue millions",
+      "Working in the simplified campaign creation project which is projected to increase ad revenue by millions",
     ],
     icon: <FaLinkedin />,
   },
