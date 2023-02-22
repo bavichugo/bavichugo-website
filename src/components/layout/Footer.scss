@@ -21,9 +21,24 @@
   color: rgba(255, 255, 255, 0.35);
   font-size: 2rem;
 
+  &.youtube:hover {
+    color: red;
+  }
+
+  &.instagram:hover {
+    color: rgb(250, 96, 183);
+  }
+  
+  &.linkedin:hover {
+    color: $blue-light;
+  }
+  
+  &.github:hover {
+    color: white;
+  }
+
   &:hover {
     cursor: pointer;
-    color: $blue-light;
   }
 }
 

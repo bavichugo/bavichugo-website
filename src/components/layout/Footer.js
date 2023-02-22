@@ -4,18 +4,25 @@ import { IconContext } from "react-icons";
 
 const Footer = () => {
   const icons = [
-    { link: "https://github.com/bavichugo", component: <FaGithub /> },
+    {
+      link: "https://github.com/bavichugo",
+      component: <FaGithub />,
+      className: "github",
+    },
     {
       link: "https://www.linkedin.com/in/vhbatistela/",
       component: <FaLinkedin />,
+      className: "linkedin",
     },
     {
       link: "https://www.instagram.com/victorbatistela/",
       component: <FaInstagram />,
+      className: "instagram",
     },
     {
       link: "https://www.youtube.com/@programadormestre5392",
       component: <FaYoutube />,
+      className: "youtube",
     },
   ];
 
@@ -25,7 +32,9 @@ const Footer = () => {
         <ul>
           {icons.map((icon) => (
             <li>
-              <IconContext.Provider value={{ className: "footer__icon" }}>
+              <IconContext.Provider
+                value={{ className: `footer__icon ${icon.className}` }}
+              >
                 <a href={icon.link} target="_blank">
                   {icon.component}
                 </a>
